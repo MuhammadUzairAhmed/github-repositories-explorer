@@ -36,4 +36,8 @@ npm run test
 
 ## LIVE DEMO LINK
 
-www.example.com
+https://github-repositories-explorer-p4bvaczku.vercel.app/
+
+## DEMO VIDEO
+
+https://www.loom.com/share/ea93cb4336d341bf864502205c2644b4
