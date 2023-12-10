@@ -1,8 +1,8 @@
-import { Repository } from "../interfaces/repository";
-import { useAppSelector } from "../store/store";
-import List from "./List";
-import Loading from "./Loading";
-import Repositories from "./Repositories";
+import { Repository } from "../../interfaces/repository";
+import { useAppSelector } from "../../store/store";
+import List from "../List";
+import Loading from "../Loading";
+import Repositories from "../Repositories";
 
 const Users = () => {
   const users = useAppSelector((state) => state.user.users);

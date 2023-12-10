@@ -1,6 +1,6 @@
 import { useRef } from "react";
-import { useAppDispatch } from "../store/store";
-import { fetchUsers, fetchingData } from "../store/github/userSlice";
+import { useAppDispatch } from "../../store/store";
+import { fetchUsers, fetchingData } from "../../store/github/userSlice";
 import { useErrorBoundary } from "react-error-boundary";
 
 const Search = () => {

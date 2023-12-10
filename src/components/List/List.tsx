@@ -1,10 +1,10 @@
-import { useAppDispatch } from "../store/store";
+import { useAppDispatch } from "../../store/store";
 import {
   fetchRepositories,
   fetchingData,
   handleDetailClose,
-} from "../store/github/userSlice";
-import { User } from "../interfaces/user";
+} from "../../store/github/userSlice";
+import { User } from "../../interfaces/user";
 import { useErrorBoundary } from "react-error-boundary";
 
 interface List {

@@ -1,6 +1,6 @@
 import { beforeEach, describe, expect, it, vi } from "vitest";
 import Users from "./Users";
-import { store } from "../store/store";
+import { store } from "../../store/store";
 import { Provider } from "react-redux";
 import { render } from "@testing-library/react";
 import * as reactRedux from "react-redux";

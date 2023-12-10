@@ -1,4 +1,4 @@
-import { Repository } from "../interfaces/repository";
+import { Repository } from "../../interfaces/repository";
 
 interface Repositories {
   repository: Repository;

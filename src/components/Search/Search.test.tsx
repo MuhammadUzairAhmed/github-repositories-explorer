@@ -2,7 +2,7 @@ import { render, fireEvent } from "@testing-library/react";
 import { test, vi } from "vitest";
 import { Provider } from "react-redux";
 import Search from "./Search";
-import { store } from "../store/store";
+import { store } from "../../store/store";
 
 vi.mock("react-error-boundary", () => ({
   // Mock the useErrorBoundary hook behavior for testing
