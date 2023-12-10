@@ -38,7 +38,7 @@ npm run test
 
 ## LIVE DEMO LINK
 
-https://github-repositories-explorer-p4bvaczku.vercel.app/
+https://github-repositories-explorer-lemon.vercel.app/
 
 ## DEMO VIDEO
 
