@@ -1,10 +1,11 @@
+import { memo } from "react";
 import { Repository } from "../../interfaces/repository";
 import { useAppSelector } from "../../store/store";
 import List from "../List";
 import Loading from "../Loading";
 import Repositories from "../Repositories";
 
-const Users = () => {
+const Users = memo(() => {
   const users = useAppSelector((state) => state.user.users);
   const userId = useAppSelector((state) => state.user.userId);
   const repositories = useAppSelector((state) => state.user.repositories);
@@ -33,6 +34,6 @@ const Users = () => {
       )}
     </div>
   );
-};
+});
 
 export default Users;

@@ -1,3 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Apply font-display to a @font-face rule */
+@font-face {
+    font-family: 'Roboto';
+    /* Modify your font name here */
+    src: url('Roboto.woff2') format('woff2');
+    font-display: swap;
+    /* or any other value */
+}
+
+/* Apply the font to an element */
+body {
+    font-family: 'Roboto', sans-serif;
+    /* Use the modified font name here */
+}

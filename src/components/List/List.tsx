@@ -1,3 +1,4 @@
+import { memo } from "react";
 import { useAppDispatch } from "../../store/store";
 import {
   fetchRepositories,
@@ -11,7 +12,7 @@ interface List {
   item: User;
   userId: number;
 }
-const List = ({ item, userId }: List) => {
+const List = memo(({ item, userId }: List) => {
    const { showBoundary } = useErrorBoundary();
  const dispatch = useAppDispatch();
 
@@ -75,6 +76,6 @@ const List = ({ item, userId }: List) => {
       </h3>
     </>
   );
-};
+});
 
 export default List;

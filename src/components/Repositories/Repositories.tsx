@@ -1,9 +1,10 @@
+import { memo } from "react";
 import { Repository } from "../../interfaces/repository";
 
 interface Repositories {
   repository: Repository;
 }
-const Repositories = ({ repository }: Repositories) => {
+const Repositories = memo(({ repository }: Repositories) => {
   const utcDateString = repository.updated_at.toString();
   const date = new Date(utcDateString);
   const localDateString = date.toLocaleString();
@@ -36,10 +37,10 @@ const Repositories = ({ repository }: Repositories) => {
                     width="18"
                     height="18"
                     viewBox="0 0 24 24"
-                    stroke-width="2"
+                    strokeWidth="2"
                     stroke="currentColor"
                     fill="none"
-                    stroke-linecap="round"
+                    strokeLinecap="round"
                     stroke-linejoin="round"
                   >
                     <path stroke="none" d="M0 0h24v24H0z" />
@@ -61,6 +62,6 @@ const Repositories = ({ repository }: Repositories) => {
       </ul>
     </div>
   );
-};
+});
 
 export default Repositories;
