@@ -1,12 +1,12 @@
 import { memo } from "react";
 import { useAppDispatch } from "../../store/store";
 import {
-  fetchRepositories,
   fetchingData,
   handleDetailClose,
 } from "../../store/github/userSlice";
 import { User } from "../../interfaces/user";
 import { useErrorBoundary } from "react-error-boundary";
+import { fetchRepositories } from "../../utils/api";
 
 interface List {
   item: User;

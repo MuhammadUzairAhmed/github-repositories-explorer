@@ -1,7 +1,7 @@
-import { createAsyncThunk, createSlice, PayloadAction } from "@reduxjs/toolkit";
-import queryString from "query-string";
+import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { User, UserState } from "../../interfaces/user";
 import { Repository } from "../../interfaces/repository";
+import { fetchRepositories, fetchUsers } from "../../utils/api";
 
 // Initial state
 const initialState: UserState = {
@@ -10,44 +10,6 @@ const initialState: UserState = {
   userId: -1,
   repositories: [],
 };
-
-// Async thunk for fetching users from GitHub API
-export const fetchUsers = createAsyncThunk(
-  "user/fetch",
-  async (name: string) => {
-    const query = {
-      q: name,
-      per_page: 5,
-    };
-    try {
-      const params = queryString.stringify(query);
-      const response = await fetch(
-        `https://api.github.com/search/users?${params}`
-      );
-
-      const data = await response.json();
-      return data.items;
-    } catch (err) {
-      return (err as Error).message;
-    }
-  }
-);
-
-// Async thunk for fetching repositories of a user from GitHub API
-export const fetchRepositories = createAsyncThunk(
-  "repository/fetch",
-  async (name: string) => {
-    try {
-      const response = await fetch(
-        `https://api.github.com/users/${name}/repos`
-      );
-      const data = await response.json();
-      return data;
-    } catch (err) {
-      return (err as Error).message;
-    }
-  }
-);
 
 // Slice creation
 export const UserSlice = createSlice({
