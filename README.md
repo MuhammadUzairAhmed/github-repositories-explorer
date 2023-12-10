@@ -12,7 +12,7 @@
 
 5.Tailwind css
 
-6.Vitest
+6.Vitest and React-testing-library for testing.
 
 7.Redux Toolkit
 
