@@ -22,6 +22,8 @@
 
 10.Memoization
 
+11.Deployed in Vercel
+
 ## STEP TO CLONE AND RUN:
 
 1. Clone repo.
